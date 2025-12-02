@@ -19,7 +19,7 @@ const HomeComp = () => {
         </div>
       </div>
 
-      <div className="content w-full bg-[#FCFCFC] h-screen flex items-center justify-center">
+      <div className="content w-full bg-[#FCFCFC] h-screen flex items-center justify-center lg:pt-0 pt-100">
         <div className="container mx-auto h-full flex flex-col justify-center items-center">
           <div className="flex flex-col lg:flex-row w-full max-w-7xl justify-between items-center">
             <h2 className="text-lg sm:text-4xl md:text-5xl text-center lg:text-start font-josefin font-semibold text-black">
@@ -57,7 +57,7 @@ const HomeComp = () => {
         </div>
       </div>
 
-      <div className="w-full bg-[#FCFCFC] h-screen flex items-center justify-center mt-0 sm:mt-[-100px]">
+      <div className="w-full bg-[#FCFCFC] h-screen flex items-center justify-center sm:mt-[-50] mt-0 lg:pt-0 pt-200">
         <div className="container mx-auto h-full flex flex-col justify-center items-center">
           <div className="text-center mb-10">
             <h1 className="text-lg sm:text-4xl md:text-5xl font-josefin font-semibold text-black">Our Services</h1>
@@ -109,7 +109,7 @@ const HomeComp = () => {
         </div>
       </div>
 
-      <div className="content w-full bg-[#FCFCFC] min-h-screen flex flex-col items-center justify-start">
+      <div className="content w-full bg-[#FCFCFC] min-h-screen flex flex-col items-center justify-start lg:pt-0 md:pt-100 pt-110">
         <div className="container mx-auto h-full flex flex-col justify-center items-center">
           <div className="flex flex-col lg:flex-row w-full max-w-7xl justify-between items-center mt-15">
             <h2 className="text-lg sm:text-4xl md:text-5xl text-center lg:text-start font-josefin font-semibold text-black">
