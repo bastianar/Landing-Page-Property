@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+import phone from "../assets/icon/phone-call.png"
+import message from "../assets/icon/messenger.png"
+import envelop from "../assets/icon/envelope.png"
+
 const ContactComp = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [successMsg, setSuccessMsg] = useState("");
@@ -60,7 +64,7 @@ const ContactComp = () => {
               <p>Hello! We are always here to help you.</p>
               <div className="flex gap-4 mt-4 w-full h-20 p-4 bg-red-200 rounded-lg items-center">
                 <div>
-                  <img src="../src/assets/icon/phone-call.png" alt="" className="w-10" />
+                  <img src={phone} alt="" className="w-10" />
                 </div>
                 <div>
                   <h1 className="text-bold text-lg">Phone</h1>
@@ -70,7 +74,7 @@ const ContactComp = () => {
               <div className="flex gap-4 mt-4 w-full h-20 p-4 bg-red-200 rounded-lg items-center hover:bg-red-400 transition-colors duration-300">
                 <a href="https://api.whatsapp.com/send/?phone=081314768879&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 w-full h-20">
                   <div>
-                    <img src="../src/assets/icon/messenger.png" alt="" className="w-10" />
+                    <img src={message} alt="" className="w-10" />
                   </div>
                   <div>
                     <h1>Whatsapp</h1>
@@ -80,7 +84,7 @@ const ContactComp = () => {
               </div>
               <div className="flex gap-4 mt-4 w-full h-20 p-4 bg-red-200 rounded-lg items-center">
                 <div>
-                  <img src="../src/assets/icon/envelope.png" alt="" className="w-10" />
+                  <img src={envelop} alt="" className="w-10" />
                 </div>
                 <div>
                   <h1>Email</h1>
