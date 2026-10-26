@@ -3,172 +3,165 @@ import { useNavigate } from "react-router-dom";
 
 import thumbnail from "../assets/image/thumnail.jpg";
 import rumah5 from "../assets/image/Rumah 5.jpg";
+
+const stats = [
+  { value: "40+", label: "Satisfied Customer", accent: false },
+  { value: "100+", label: "Sold", accent: true },
+  { value: "05+", label: "Years of Experience", accent: false },
+  { value: "30+", label: "Project Delivered", accent: false },
+];
+
+const services = [
+  {
+    icon: "fi fi-ts-data-processing",
+    title: "Fast and Easy Process",
+    description: "No hassle, no queues, no stress. We offer a quick and easy process so you can focus on what matters most—choosing the best home for your future.",
+    accent: false,
+  },
+  {
+    icon: "fi fi-ts-shield-check",
+    title: "Guaranteed Quality Houses",
+    description: "With our quality guarantee, you don't have to worry about the condition of the building or the documents. We ensure that the house you buy is ready to move in and free of problems.",
+    accent: false,
+  },
+  {
+    icon: "fi fi-tr-hand-present",
+    title: "Free Electronic Equipment",
+    description: "Every home purchase comes with free electronic appliances such as air conditioners, refrigerators, or washing machines. Ready to use, at no additional cost!",
+    accent: true,
+  },
+  {
+    icon: "fi fi-tr-cheap-stack",
+    title: "Affordable Property",
+    description: "Property investment is now more accessible. With affordable prices and a wide selection of strategic locations, now is the best time to own your own home.",
+    accent: false,
+  },
+];
+
 const HomeComp = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <>
-      <div className="relative w-full h-screen">
-        <img src={thumbnail} alt="Background" className="absolute w-full h-full object-cover" />
+      {/* Hero */}
+      <section className="relative h-screen min-h-[32rem] w-full">
+        <img src={thumbnail} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-black/50" />
 
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="container mx-auto h-full flex flex-col justify-center items-center">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-josefin font-semibold text-white">Welcome to Properties</h1>
-            <p className="text-base sm:text-xl md:text-3xl font-sans font-medium text-white mt-4 bg-red-300 p-4 rounded-4xl">Find your dream home with us</p>
-          </div>
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+          <h1 className="font-josefin text-3xl font-semibold text-white sm:text-5xl md:text-6xl">Welcome to Properties</h1>
+          <p className="mt-4 rounded-4xl bg-red-300 p-4 font-sans text-base font-medium text-white sm:text-xl md:text-3xl">Find your dream home with us</p>
         </div>
-      </div>
+      </section>
 
-      <div className="content w-full bg-[#FCFCFC] h-screen flex items-center justify-center lg:pt-0 pt-100">
-        <div className="container mx-auto h-full flex flex-col justify-center items-center">
-          <div className="flex flex-col lg:flex-row w-full max-w-7xl justify-between items-center">
-            <h2 className="text-lg sm:text-4xl md:text-5xl text-center lg:text-start font-josefin font-semibold text-black">
+      {/* About */}
+      <section className="w-full bg-[#FCFCFC] px-4 py-16 sm:py-24">
+        <div className="mx-auto flex max-w-7xl flex-col gap-10">
+          <div className="flex flex-col items-center justify-between gap-4 lg:flex-row">
+            <h2 className="text-center font-josefin text-2xl font-semibold text-black sm:text-4xl md:text-5xl lg:text-start">
               Trust Us With <br />
               Your Dream Home
             </h2>
-            <p className="text-sm sm:text-xl md:text-2xl text-center lg:text-start font-sans font-medium text-[#626262] mt-4">
-              Your dream home is no longer just a dream — <br />
-              find and own it with us, a trusted platform with <br />
+            <p className="text-center font-sans text-sm font-medium text-[#626262] sm:text-xl md:text-2xl lg:text-start">
+              Your dream home is no longer just a dream — <br className="hidden sm:block" />
+              find and own it with us, a trusted platform with <br className="hidden sm:block" />
               hundreds of homes sold.
             </p>
           </div>
 
-          <div className="flex flex-col-reverse lg:flex-row w-full max-w-2xs sm:max-w-7xl justify-between items-center mt-10">
-            <div className="grid grid-cols-2 grid-rows-2 gap-6 mt-10 lg:mt-0">
-              <div className="bg-red-100 p-4 rounded-2xl shadow-md">
-                <h1 className="text-lg sm:text-4xl font-josefin font-semibold">40+</h1>
-                <p className="text-sm sm:text-lg font-sans font-normal">Satisfied Customer</p>
-              </div>
-              <div className="bg-red-300 p-4 rounded-2xl shadow-md">
-                <h1 className="text-lg sm:text-4xl font-josefin font-semibold">100+</h1>
-                <p className="text-sm sm:text-lg font-sans font-normal">Sold</p>
-              </div>
-              <div className="bg-red-100 p-4 rounded-2xl shadow-md">
-                <h1 className="text-lg sm:text-4xl font-josefin font-semibold">05+</h1>
-                <p className="text-sm sm:text-lg font-sans font-normal">Years of Experience</p>
-              </div>
-              <div className="bg-red-100 p-4 rounded-2xl shadow-md">
-                <h1 className="text-lg sm:text-4xl font-josefin font-semibold">30+</h1>
-                <p className="text-sm sm:text-lg font-sans font-normal">Project Delivered</p>
-              </div>
+          <div className="flex flex-col-reverse items-center justify-between gap-8 lg:flex-row">
+            <div className="grid w-full grid-cols-2 gap-4 sm:gap-6 lg:w-auto">
+              {stats.map((stat) => (
+                <div key={stat.label} className={`rounded-2xl p-4 shadow-md sm:p-6 ${stat.accent ? "bg-red-300" : "bg-red-100"}`}>
+                  <h3 className="font-josefin text-2xl font-semibold sm:text-4xl">{stat.value}</h3>
+                  <p className="font-sans text-sm font-normal sm:text-lg">{stat.label}</p>
+                </div>
+              ))}
             </div>
-            <img src={rumah5} alt="Home" className=" w-100 sm:w-120 lg:w-lg rounded-2xl" />
+            <img src={rumah5} alt="Rumah contoh" className="w-full max-w-lg rounded-2xl object-cover" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="w-full bg-[#FCFCFC] h-screen flex items-center justify-center sm:mt-[-50] mt-0 lg:pt-0 pt-200">
-        <div className="container mx-auto h-full flex flex-col justify-center items-center">
-          <div className="text-center mb-10">
-            <h1 className="text-lg sm:text-4xl md:text-5xl font-josefin font-semibold text-black">Our Services</h1>
-            <p className="text-sm sm:text-xl md:text-2xl font-sans font-medium text-[#626262] mt-4">
-              Buying a house from us is not only easy, <br />
+      {/* Services */}
+      <section className="w-full bg-[#FCFCFC] px-4 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 text-center">
+            <h2 className="font-josefin text-2xl font-semibold text-black sm:text-4xl md:text-5xl">Our Services</h2>
+            <p className="mt-4 font-sans text-sm font-medium text-[#626262] sm:text-xl md:text-2xl">
+              Buying a house from us is not only easy, <br className="hidden sm:block" />
               but also profitable thanks to the various special offers we provide.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-6 w-full max-w-xs sm:max-w-7xl">
-            <div className="bg-red-100 p-4 flex rounded-2xl shadow-md">
-              <div className="flex p-5 items-center">
-                <i className="fi fi-ts-data-processing text-3xl sm:text-6xl"></i>
-              </div>
-              <div>
-                <h1 className="text-md sm:text-xl font-josefin font-semibold">Fast and Easy Process</h1>
-                <p className="text-xs sm:text-lg font-sans font-normal">No hassle, no queues, no stress. We offer a quick and easy process so you can focus on what matters most—choosing the best home for your future.</p>
-              </div>
-            </div>
-            <div className="bg-red-100 p-4 flex rounded-2xl shadow-md">
-              <div className="flex p-5 items-center">
-                <i className="fi fi-ts-shield-check text-3xl sm:text-6xl"></i>
-              </div>
-              <div>
-                <h1 className="text-md sm:text-xl font-josefin font-semibold">Guaranteed Quality Houses</h1>
-                <p className="text-xs sm:text-lg font-sans font-normal">
-                  With our quality guarantee, you don't have to worry about the condition of the building or the documents. We ensure that the house you buy is ready to move in and free of problems.{" "}
-                </p>
-              </div>
-            </div>
-            <div className="bg-red-300 p-4 flex rounded-2xl shadow-md">
-              <div className="flex p-5 items-center">
-                <i className="fi fi-tr-hand-present text-3xl sm:text-6xl"></i>
-              </div>
-              <div>
-                <h1 className="text-md sm:text-xl font-josefin font-semibold">Free Electronic Equipment</h1>
-                <p className="text-xs sm:text-lg font-sans font-normal">Every home purchase comes with free electronic appliances such as air conditioners, refrigerators, or washing machines. Ready to use, at no additional cost!</p>
-              </div>
-            </div>
-            <div className="bg-red-100 p-4 flex rounded-2xl shadow-md">
-              <div className="flex p-5 items-center">
-                <i className="fi fi-tr-cheap-stack text-3xl sm:text-6xl"></i>
-              </div>
-              <div>
-                <h1 className="text-md sm:text-xl font-josefin font-semibold">Affordable Property</h1>
-                <p className="text-xs sm:text-lg font-sans font-normal">Property investment is now more accessible. With affordable prices and a wide selection of strategic locations, now is the best time to own your own home.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="content w-full bg-[#FCFCFC] min-h-screen flex flex-col items-center justify-start lg:pt-0 md:pt-100 pt-110">
-        <div className="container mx-auto h-full flex flex-col justify-center items-center">
-          <div className="flex flex-col lg:flex-row w-full max-w-7xl justify-between items-center mt-15">
-            <h2 className="text-lg sm:text-4xl md:text-5xl text-center lg:text-start font-josefin font-semibold text-black">
-              Discover your <br />
-              Perfect Property
-            </h2>
-            <p className="text-sm sm:text-xl md:text-2xl text-center lg:text-start font-sans font-medium text-[#626262] mt-4">
-              Find the home you've always dreamed of. <br />
-              Here, the perfect property is no longer hard to find.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 gap-x-10 px-4 lg:px-8 w-full max-w-xs sm:max-w-7xl mt-20">
-            {properties.map((property) => (
-              <div key={property.id} className={`relative w-full h-60 bg-cover bg-center rounded-2xl shadow-md overflow-hidden group`} style={{ backgroundImage: `url(${property.image})` }}>
-                <div
-                  className="absolute lg:bottom-0 left-0 w-full
-          transform translate-y-full group-hover:none sm:group-hover:translate-y-0
-          transition-transform duration-500 ease-in-out"
-                >
-                  <div className="bg-black/70 text-white p-4">
-                    <h3 className="text-xl font-josefin font-semibold">{property.title}</h3>
-                    <p className="text-lg font-sans">{property.location}</p>
-                    <p className="text-lg font-sans font-bold text-red-400">{property.price}</p>
-                  </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+            {services.map((service) => (
+              <div key={service.title} className={`flex items-center gap-3 rounded-2xl p-4 shadow-md sm:gap-4 sm:p-6 ${service.accent ? "bg-red-300" : "bg-red-100"}`}>
+                <i className={`${service.icon} shrink-0 text-4xl sm:text-6xl`} aria-hidden="true" />
+                <div className="min-w-0">
+                  <h3 className="font-josefin text-base font-semibold sm:text-xl">{service.title}</h3>
+                  <p className="mt-1 font-sans text-xs font-normal sm:text-base">{service.description}</p>
                 </div>
               </div>
             ))}
           </div>
-          <div className="mt-10">
-            <button onClick={navigate.bind(null, "/property")} className="bg-red-100 text-black px-6 py-3 shadow-md cursor-pointer rounded-full font-sans font-semibold hover:bg-red-300 transition-colors duration-300">
+        </div>
+      </section>
+
+      {/* Properties */}
+      <section className="w-full bg-[#FCFCFC] px-4 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col items-center justify-between gap-4 lg:flex-row">
+            <h2 className="text-center font-josefin text-2xl font-semibold text-black sm:text-4xl md:text-5xl lg:text-start">
+              Discover your <br />
+              Perfect Property
+            </h2>
+            <p className="text-center font-sans text-sm font-medium text-[#626262] sm:text-xl md:text-2xl lg:text-start">
+              Find the home you've always dreamed of. <br className="hidden sm:block" />
+              Here, the perfect property is no longer hard to find.
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {properties.map((property) => (
+              <div key={property.id} className="group relative h-64 overflow-hidden rounded-2xl shadow-md">
+                <img src={property.image} alt={property.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                {/* Mobile/tablet: info selalu terlihat. Desktop (lg): muncul saat hover */}
+                <div className="absolute bottom-0 left-0 w-full bg-black/70 p-4 text-white transition-transform duration-500 ease-in-out lg:translate-y-full lg:group-hover:translate-y-0">
+                  <h3 className="font-josefin text-lg font-semibold sm:text-xl">{property.title}</h3>
+                  <p className="font-sans text-sm sm:text-lg">{property.location}</p>
+                  <p className="font-sans text-sm font-bold text-red-400 sm:text-lg">{property.price}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 flex justify-center">
+            <button onClick={() => navigate("/property")} className="cursor-pointer rounded-full bg-red-100 px-6 py-3 font-sans font-semibold text-black shadow-md transition-colors duration-300 hover:bg-red-300">
               View All Properties
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="w-80 sm:w-full mx-auto bg-[#FCFCFC] h-90 flex items-center justify-center">
-        <div className="lg:w-[70rem] xl:w-[80rem] mx-auto bg-red-300 h-fit flex flex-col lg:flex-row justify-between items-center rounded-2xl p-10">
+      {/* Contact */}
+      <section className="w-full bg-[#FCFCFC] px-4 pb-16 sm:pb-24">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 rounded-2xl bg-red-300 p-6 sm:p-10 lg:flex-row">
           <div>
-            <h1 className="text-lg sm:text-4xl md:text-5xl font-josefin font-semibold text-black">Get in touch</h1>
-            <p className="text-sm sm:text-xl md:text-2xl font-sans font-medium text-[#626262] mt-4">
-              Have questions or need assistance? <br />
+            <h2 className="font-josefin text-2xl font-semibold text-black sm:text-4xl md:text-5xl">Get in touch</h2>
+            <p className="mt-4 font-sans text-sm font-medium text-[#626262] sm:text-xl md:text-2xl">
+              Have questions or need assistance? <br className="hidden sm:block" />
               Our team is here to help you find your dream home.
             </p>
           </div>
-          <div className="flex flex-row lg:flex-col text-center w-full lg:w-50 justify-between items-center mt-6 lg:mt-0">
-            <h1 className="text-sm sm:text-xl md:text-2xl font-sans font-medium text-[#626262]">Let's Contact Us</h1>
-            <button
-              onClick={navigate.bind(null, "/contact")}
-              className="bg-black text-white  px-5 sm:px-6 py-3 text-sm sm:text-base cursor-pointer rounded-full font-sans font-semibold hover:bg-black/80 transition-colors duration-300 lg:mt-6"
-            >
+          <div className="flex w-full flex-row items-center justify-between gap-4 text-center lg:w-auto lg:flex-col">
+            <p className="font-sans text-sm font-medium text-[#626262] sm:text-xl md:text-2xl">Let's Contact Us</p>
+            <button onClick={() => navigate("/contact")} className="cursor-pointer rounded-full bg-black px-5 py-3 font-sans text-sm font-semibold text-white transition-colors duration-300 hover:bg-black/80 sm:px-6 sm:text-base">
               Contact Us
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

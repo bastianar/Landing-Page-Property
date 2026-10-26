@@ -1,25 +1,12 @@
-import rumah1 from "../assets/image/Rumah1.jpg"
-import rumah2 from "../assets/image/Rumah2.jpg"
-import rumah3 from "../assets/image/Rumah3.jpg"
-import rumah4 from "../assets/image/Rumah4.jpg"
-
+import rumah1 from "../assets/image/Rumah1.jpg";
+import rumah2 from "../assets/image/Rumah2.jpg";
+import rumah3 from "../assets/image/Rumah3.jpg";
+import rumah4 from "../assets/image/Rumah4.jpg";
 
 export const navlinks = [
-  {
-    id: 1,
-    path: "",
-    title: "Home",
-  },
-  {
-    id: 2,
-    path: "property",
-    title: "Property",
-  },
-  {
-    id: 3,
-    path: "contact",
-    title: "Contact",
-  },
+  { id: 1, path: "", title: "Home" },
+  { id: 2, path: "property", title: "Property" },
+  { id: 3, path: "contact", title: "Contact" },
 ];
 
 export const properties = [
@@ -28,42 +15,42 @@ export const properties = [
     title: "Cluster Agave",
     location: "Residence City, Indonesia",
     price: "Rp. 450,000,000",
-    image: {rumah2},
+    image: rumah2,
   },
   {
     id: 2,
     title: "Cluster Orchid",
     location: "Residence City, Indonesia",
     price: "Rp. 500,000,000",
-    image: {rumah3},
+    image: rumah3,
   },
   {
     id: 3,
     title: "Cluster Cendana",
     location: "Residence City, Indonesia",
     price: "Rp. 430,000,000",
-    image: {rumah4},
+    image: rumah4,
   },
   {
     id: 4,
     title: "Cluster Bougenville",
     location: "Residence City, Indonesia",
     price: "Rp. 480,000,000",
-    image: {rumah1},
+    image: rumah1,
   },
   {
     id: 5,
     title: "Cluster Melati",
     location: "Residence City, Indonesia",
     price: "Rp. 470,000,000",
-    image: {rumah3},
+    image: rumah3,
   },
   {
     id: 6,
     title: "Cluster Rafflesia",
     location: "Residence City, Indonesia",
     price: "Rp. 490,000,000",
-    image: {rumah2},
+    image: rumah2,
   },
 ];
 
@@ -73,7 +60,7 @@ export const detail = [
     title: "Cluster Agave",
     location: "Residence City, Indonesia",
     price: "Rp. 450,000,000",
-    image: {rumah2},
+    image: rumah2,
     specs: "3 Kamar, 2 Kamar Mandi, 1 Garasi",
     description: "Cluster Agave adalah kawasan perumahan modern yang terletak di Residence City, menawarkan perpaduan antara kenyamanan dan gaya.",
   },
@@ -82,7 +69,7 @@ export const detail = [
     title: "Cluster Orchid",
     location: "Residence City, Indonesia",
     price: "Rp. 500,000,000",
-    image: {rumah3},
+    image: rumah3,
     specs: "4 Kamar, 3 Kamar Mandi, 2 Garasi",
     description: "Cluster Orchid menawarkan rumah-rumah elegan dengan tata letak yang luas dan lanskap yang indah.",
   },
@@ -91,7 +78,7 @@ export const detail = [
     title: "Cluster Cendana",
     location: "Residence City, Indonesia",
     price: "Rp. 430,000,000",
-    image: {rumah4},
+    image: rumah4,
     specs: "3 Kamar, 2 Kamar Mandi, 1 Garasi",
     description: "Cluster Cendana menawarkan pilihan perumahan terjangkau dengan fasilitas modern dan komunitas yang ramah.",
   },
@@ -100,7 +87,7 @@ export const detail = [
     title: "Cluster Bougenville",
     location: "Residence City, Indonesia",
     price: "Rp. 480,000,000",
-    image: {rumah1},
+    image: rumah1,
     specs: "4 Kamar, 3 Kamar Mandi, 2 Garasi",
     description: "Cluster Bougenville dikenal karena komunitasnya yang dinamis dan rumah-rumah indah yang dikelilingi oleh alam.",
   },
@@ -109,7 +96,7 @@ export const detail = [
     title: "Cluster Melati",
     location: "Residence City, Indonesia",
     price: "Rp. 470,000,000",
-    image: {rumah3},
+    image: rumah3,
     specs: "3 Kamar, 2 Kamar Mandi, 1 Garasi",
     description: "Cluster Melati menggabungkan arsitektur modern dengan unsur-unsur tradisional, menciptakan pengalaman tinggal yang unik.",
   },
@@ -118,7 +105,7 @@ export const detail = [
     title: "Cluster Rafflesia",
     location: "Residence City, Indonesia",
     price: "Rp. 490,000,000",
-    image: {rumah2},
+    image: rumah2,
     specs: "4 Kamar, 3 Kamar Mandi, 2 Garasi",
     description: "Cluster Rafflesia menawarkan hunian mewah dengan fasilitas terbaik dan lingkungan yang tenang.",
   },

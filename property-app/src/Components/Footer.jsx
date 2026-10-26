@@ -1,4 +1,6 @@
-import React from "react";
+import facebook from "../assets/logo/facebook2.png"
+import instagram from "../assets/logo/instagram.png"
+import tiktok from "../assets/logo/tiktok.png"
 
 const Footer = () => {
   return (
@@ -61,13 +63,13 @@ const Footer = () => {
           <p className="text-center text-xs sm:text-base text-white">&copy; {new Date().getFullYear()} Property. All rights reserved.</p>
           <div className="sosial-icons flex items-center justify-center  gap-4 mt-4">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/logo/facebook2.png" alt="" className="w-6 sm:w-10" />
+              <img src={facebook} alt="" className="w-6 sm:w-10" />
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/logo/instagram.png" alt="" className="w-6 sm:w-10" />
+              <img src={instagram} alt="" className="w-6 sm:w-10" />
             </a>
             <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
-              <img src="src/assets/logo/tiktok.png" alt="" className="w-6 sm:w-10" />
+              <img src={tiktok} alt="" className="w-6 sm:w-10" />
             </a>
           </div>
         </div>
