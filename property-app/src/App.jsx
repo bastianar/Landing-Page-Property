@@ -3,8 +3,8 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 
-import Home from "./Pages/Home";
-import Property from "./Pages/Property";
+import Home from "../Pages/Home";
+import Property from "../Pages/Property";
 import Contact from "./Pages/Contact";
 
 function App() {
