@@ -1,13 +1,15 @@
 import { properties } from "../data/data";
 import { useNavigate } from "react-router-dom";
 
+import thumbnail from "../assets/image/thumnail.jpg";
+import rumah5 from "../assets/image/Rumah 5.jpg";
 const HomeComp = () => {
   let navigate = useNavigate();
 
   return (
     <>
       <div className="relative w-full h-screen">
-        <img src="src/assets/image/thumnail.jpg" alt="Background" className="absolute w-full h-full object-cover" />
+        <img src={thumbnail} alt="Background" className="absolute w-full h-full object-cover" />
 
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -52,7 +54,7 @@ const HomeComp = () => {
                 <p className="text-sm sm:text-lg font-sans font-normal">Project Delivered</p>
               </div>
             </div>
-            <img src="src/assets/image/Rumah 5.jpg" alt="Home" className=" w-100 sm:w-120 lg:w-lg rounded-2xl" />
+            <img src={rumah5} alt="Home" className=" w-100 sm:w-120 lg:w-lg rounded-2xl" />
           </div>
         </div>
       </div>
@@ -158,7 +160,10 @@ const HomeComp = () => {
           </div>
           <div className="flex flex-row lg:flex-col text-center w-full lg:w-50 justify-between items-center mt-6 lg:mt-0">
             <h1 className="text-sm sm:text-xl md:text-2xl font-sans font-medium text-[#626262]">Let's Contact Us</h1>
-            <button onClick={navigate.bind(null, "/contact")} className="bg-black text-white  px-5 sm:px-6 py-3 text-sm sm:text-base cursor-pointer rounded-full font-sans font-semibold hover:bg-black/80 transition-colors duration-300 lg:mt-6">
+            <button
+              onClick={navigate.bind(null, "/contact")}
+              className="bg-black text-white  px-5 sm:px-6 py-3 text-sm sm:text-base cursor-pointer rounded-full font-sans font-semibold hover:bg-black/80 transition-colors duration-300 lg:mt-6"
+            >
               Contact Us
             </button>
           </div>
